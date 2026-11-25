@@ -1,0 +1,39 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introducción" />
+
+<img src="reli-sentado-pochoclo.svg" alt="" width="200" />
+
+# Design system de Reli
+
+Reli (de "recomendame una peli") es una app para llevar registro de lo que viste, ver el puntaje de IMDb y Rotten Tomatoes antes de empezar algo, y recomendárselo a tus amigos.
+
+Este sistema reúne todo lo que hace falta para que la app se vea y se comporte igual en cada pantalla: tokens, componentes, estados y reglas de accesibilidad.
+
+## Cómo está armado
+
+- **Tokens.** Una sola fuente de verdad en `tokens/tokens.json`. El script `npm run tokens` genera `dist/tokens.css` (variables CSS) y `dist/tokens.json` (valores resueltos). Nada se escribe a mano en dos lugares.
+- **Dos temas.** *Pochoclo* (claro) y *Función de noche* (oscuro). Los componentes solo usan tokens semánticos (`--color-text`, `--color-primary`), así que cambian de tema sin tocar su CSS. Probalo con el selector "Tema" de la barra de arriba.
+- **Contraste verificado.** `npm run contrast` calcula el contraste WCAG de cada par de colores que usan los componentes, en los dos temas, y falla el build si alguno no llega al mínimo.
+- **Componentes sin framework.** HTML, CSS y JavaScript plano, igual que la app. Cada componente es una función que devuelve HTML y una hoja de estilos con prefijo `r-`.
+
+## Usarlo en la app
+
+```html
+<link rel="stylesheet" href="design-system/src/index.css">
+```
+
+```js
+import { Button, StatusBadge } from './design-system/src/index.js';
+
+el.innerHTML = Button({ label: 'Recomendar', iconName: 'send' });
+```
+
+## Comandos
+
+| Comando | Qué hace |
+| --- | --- |
+| `npm run tokens` | Genera el CSS y el JSON desde `tokens.json` |
+| `npm run contrast` | Revisa el contraste de todos los pares de colores |
+| `npm run storybook` | Levanta esta documentación en `localhost:6006` |
+| `npm run build-storybook` | Genera la versión estática para publicar |

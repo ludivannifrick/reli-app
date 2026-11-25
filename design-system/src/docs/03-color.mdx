@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { Palette, SemanticColors, ContrastTable } from './blocks.jsx';
+
+<Meta title="Fundamentos/Color" />
+
+# Color
+
+La identidad pochoclo, ajustada para que todo pase WCAG AA. Hay dos capas: **primitivos** (la paleta, con nombre propio) y **semánticos** (para qué se usa cada color). Los componentes solo usan los semánticos.
+
+## Paleta
+
+<Palette />
+
+Caramelo es solo decorativo (ilustraciones, el osito). Sobre crema no llega a 3:1, así que nunca se usa para texto ni controles.
+
+## Tokens semánticos
+
+<SemanticColors />
+
+### Reglas de uso
+
+- **Primario** (`--color-primary`): la acción principal de la pantalla. En claro es el rojo balde; en oscuro pasa a manteca, porque el rojo sobre noche no llega al contraste.
+- **Seleccionado** (`--color-surface-selected`): chips y segmentos activos. Es tinta en claro y humo en oscuro: el estado se nota por contraste y por la tilde, no por un color nuevo.
+- **Acento** (`--color-accent`): manteca, siempre detrás de texto oscuro. Nunca como color de texto.
+- **Borde de control** vs **borde**: el primero es para todo lo que se toca y pasa 3:1. El segundo es decorativo y no se usa para delimitar controles.
+
+## Contraste verificado
+
+Esta tabla se calcula en vivo desde los tokens. El mismo cálculo corre en `npm run contrast` y frena el build si algo falla.
+
+<ContrastTable />

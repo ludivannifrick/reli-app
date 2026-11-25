@@ -1,0 +1,33 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { TypeScale } from './blocks.jsx';
+
+<Meta title="Fundamentos/Tipografía" />
+
+# Tipografía
+
+**Figtree**, de Google Fonts (gratis, licencia OFL). Una sola familia, dos pesos.
+
+<p style={{ fontFamily: 'Figtree', fontSize: 40, lineHeight: 1.2, margin: '16px 0' }}>
+  Aa Bb Cc 123 <b>Aa Bb Cc 123</b>
+</p>
+
+## Escala
+
+<TypeScale />
+
+## Reglas
+
+- **Tamaño mínimo: 13 px** (`--font-size-caption`), solo para metadatos como año o temporada.
+- **Todo input usa 16 px.** Por debajo, Safari en iPhone hace zoom al tocar el campo.
+- **Pesos:** regular para leer, bold para títulos, etiquetas de campos, botones y el estado seleccionado. Nada más.
+- **Interlineado:** 1.25 en títulos, 1.5 en la interfaz, 1.65 en sinopsis y comentarios.
+- **Largo de línea:** los párrafos se cortan en 40 a 65 caracteres (`max-width: 65ch`).
+- **Tipo oración siempre:** "Agregar a mi videoteca", no "AGREGAR A MI VIDEOTECA" ni "Agregar A Mi Videoteca".
+
+## La voz de Reli
+
+<p style={{ fontFamily: 'Caveat', fontSize: 26, background: '#F6CF6A', color: '#3A2A22', display: 'inline-block', padding: '6px 14px', borderRadius: 16 }}>
+  Sí, me quedé todo el domingo.
+</p>
+
+Caveat es la letra a mano del osito. Se usa solo en globitos de diálogo cortos (una línea), a 22 px o más, y siempre con un texto normal al lado que diga lo importante. Nunca en botones, etiquetas, ni datos.

@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { SpaceScale, RadiusScale, ShadowScale } from './blocks.jsx';
+
+<Meta title="Fundamentos/Espaciado y forma" />
+
+# Espaciado y forma
+
+## Espaciado
+
+Base de 4 px. Los saltos crecen a medida que la escala sube, para que la diferencia entre "junto" y "separado" se note.
+
+<SpaceScale />
+
+- **Dentro de un componente:** `--space-1` a `--space-3`.
+- **Entre elementos de un grupo** (título y metadatos de una tarjeta): `--space-2`.
+- **Entre grupos** (secciones de una pantalla): `--space-5` o `--space-6`.
+- **Margen lateral de pantalla:** `--space-4` (16 px).
+
+## Tamaños
+
+- `--size-touch` **44 px**: área mínima para tocar. Los chips miden 36 px de alto pero su área táctil se extiende a 44.
+- `--size-control` **48 px**: alto de botones, inputs y buscador.
+- `--size-control-lg` **52 px**: el botón principal de una hoja de detalle.
+
+## Radios
+
+<RadiusScale />
+
+Redondeado como el osito. `sm` para pósters y puntajes, `md` para controles, `lg` para tarjetas, `xl` para hojas y estados vacíos, `pill` para chips, estados y el buscador.
+
+## Elevación
+
+<ShadowScale />
+
+Sombras cálidas (tinta, no negro) y pocas. En el tema oscuro casi no se ven, por eso la profundidad ahí la marcan las superficies: `surface` es más clara que `bg`.

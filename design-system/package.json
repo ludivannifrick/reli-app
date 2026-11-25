@@ -1,0 +1,21 @@
+{
+  "name": "reli-design-system",
+  "version": "1.0.0",
+  "description": "Reli design system: tokens, components and Storybook docs",
+  "scripts": {
+    "tokens": "node scripts/tokens.mjs",
+    "contrast": "node scripts/contrast.mjs",
+    "check": "npm run tokens && npm run contrast",
+    "storybook": "npm run tokens && storybook dev -p 6006",
+    "build-storybook": "npm run check && storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^10.6.9",
+    "@storybook/addon-docs": "^10.6.9",
+    "@storybook/html-vite": "^10.6.9",
+    "storybook": "^10.6.9",
+    "vite": "^8.3.8"
+  },
+  "private": true,
+  "type": "module"
+}

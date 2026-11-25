@@ -1,0 +1,28 @@
+// Every foreground/background pair the components use, with the WCAG AA minimum.
+// 4.5 = text, 3 = UI parts (borders, icons, focus rings, filled controls vs page).
+export const pairs = [
+  ['text', 'bg', 4.5, 'Body text on page'],
+  ['text', 'surface', 4.5, 'Body text on cards'],
+  ['text', 'surface-sunken', 4.5, 'Text on sunken areas'],
+  ['text-muted', 'bg', 4.5, 'Secondary text on page'],
+  ['text-muted', 'surface', 4.5, 'Secondary text on cards'],
+  ['text-muted', 'surface-sunken', 4.5, 'Secondary text on sunken areas'],
+  ['text-on-primary', 'primary', 4.5, 'Primary button label'],
+  ['text-on-primary', 'primary-hover', 4.5, 'Primary button label, hover'],
+  ['text-on-primary', 'primary-pressed', 4.5, 'Primary button label, pressed'],
+  ['text-on-selected', 'surface-selected', 4.5, 'Selected chip and segment label'],
+  ['text-on-accent', 'accent', 4.5, 'Text on butter highlight'],
+  ['link', 'bg', 4.5, 'Links and text buttons on page'],
+  ['link', 'surface', 4.5, 'Links and text buttons on cards'],
+  ['danger', 'surface', 4.5, 'Error message text'],
+  ['success', 'surface', 4.5, 'Success message text'],
+  ['primary', 'bg', 3, 'Primary button against page'],
+  ['primary', 'surface', 3, 'Primary button against card'],
+  ['border-control', 'bg', 3, 'Input and chip borders on page'],
+  ['border-control', 'surface', 3, 'Input and chip borders on cards'],
+  ['surface-selected', 'surface', 3, 'Selected chip against card'],
+  ['focus', 'bg', 3, 'Focus ring on page'],
+  ['focus', 'surface', 3, 'Focus ring on cards'],
+  ['progress', 'progress-track', 3, 'Progress fill against track'],
+  ['progress', 'surface', 3, 'Progress fill against card'],
+];
