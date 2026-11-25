@@ -1,0 +1,23 @@
+.r-chips { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+.r-chip {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  min-height: 36px; padding: 0 var(--space-3);
+  border: var(--border-width) solid var(--color-border-control); border-radius: var(--radius-pill);
+  background: transparent; color: var(--color-text);
+  font-size: var(--font-size-small); font-weight: var(--font-weight-regular);
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-easing-standard);
+  /* 36px tall, but the tap area is extended to 44px. */
+  position: relative;
+}
+.r-chip::after { content: ''; position: absolute; inset: -4px 0; }
+.r-chip:hover { background: var(--color-surface-sunken); }
+.r-chip .r-icon { width: 16px; height: 16px; display: none; }
+
+/* Selected: fill + bold + check icon, so it never relies on color alone. */
+.r-chip[aria-pressed="true"] {
+  background: var(--color-surface-selected); color: var(--color-text-on-selected);
+  border-color: var(--color-surface-selected); font-weight: var(--font-weight-bold);
+}
+.r-chip[aria-pressed="true"] .r-icon { display: block; }

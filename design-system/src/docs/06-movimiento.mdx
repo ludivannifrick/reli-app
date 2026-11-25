@@ -1,0 +1,16 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { MotionTable } from './blocks.jsx';
+
+<Meta title="Fundamentos/Movimiento" />
+
+# Movimiento
+
+El movimiento explica qué pasó, no decora. Si no ayuda a entender un cambio, no va.
+
+<MotionTable />
+
+- **fast (120 ms):** hover, presionar, activar un chip.
+- **base (200 ms):** cambios chicos de posición o tamaño, como la barra de progreso.
+- **slow (320 ms):** la hoja de detalle entrando desde abajo.
+- **enter** para lo que aparece, **exit** para lo que se va, **standard** para el resto.
+- **Reducir movimiento:** si el sistema tiene activado "reducir movimiento", todas las duraciones pasan a 0 desde los tokens, sin tocar los componentes.

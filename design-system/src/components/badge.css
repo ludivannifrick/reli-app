@@ -1,0 +1,19 @@
+.r-status {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  min-height: 28px; padding: 0 var(--space-3) 0 var(--space-2);
+  border-radius: var(--radius-pill); background: var(--color-surface-sunken); color: var(--color-text);
+  font-size: var(--font-size-caption); font-weight: var(--font-weight-bold); line-height: 1;
+}
+.r-status .r-icon { width: 16px; height: 16px; }
+.r-status--watching { background: var(--color-accent); color: var(--color-text-on-accent); }
+.r-status--watched { background: var(--color-surface-selected); color: var(--color-text-on-selected); }
+
+.r-scores { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.r-score {
+  display: inline-flex; align-items: baseline; gap: var(--space-1);
+  padding: var(--space-1) var(--space-2); border-radius: var(--radius-sm);
+  border: var(--border-width) solid var(--color-border); color: var(--color-text);
+  font-size: var(--font-size-caption); line-height: var(--font-line-height-tight);
+}
+.r-score b { font-size: var(--font-size-small); }
+.r-score__source { color: var(--color-text-muted); }

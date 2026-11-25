@@ -1,0 +1,32 @@
+/* Base layer: applies tokens to plain elements. Components live in components/. */
+@import '../dist/tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-base);
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+
+button, input, select, textarea { font: inherit; color: inherit; }
+strong, b { font-weight: var(--font-weight-bold); }
+
+/* One focus style for everything that can be focused. Never remove it without a replacement. */
+:focus-visible {
+  outline: var(--border-focus) solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.r-sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+}
+
+.r-icon { width: 20px; height: 20px; flex-shrink: 0; }

@@ -1,0 +1,42 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Accesibilidad" />
+
+# Accesibilidad
+
+El objetivo es **WCAG 2.2 nivel AA**. Cada historia de componente tiene el panel "Accessibility" (axe) para revisarla en vivo.
+
+## Lo que el sistema resuelve solo
+
+- **Contraste** verificado por script en los dos temas: 4.5:1 para texto, 3:1 para controles y foco.
+- **Foco visible** en todo: anillo de 3 px en `--color-focus`, separado 2 px del elemento.
+- **Áreas táctiles** de 44 × 44 px como mínimo.
+- **Estados con más de una señal:** color + ícono + texto, o color + negrita.
+- **Reducir movimiento** respetado desde los tokens.
+- **Temas** que siguen la preferencia del sistema, con opción de forzar uno.
+
+## Lo que hay que cuidar al usar los componentes
+
+- **Botones solo con ícono** siempre llevan `label`, que se vuelve su `aria-label`.
+- **Imágenes decorativas** (el osito, pósters de relleno) van con `alt=""`. Un póster real lleva el título como `alt`.
+- **Campos:** siempre con etiqueta visible. El placeholder es un ejemplo, no la etiqueta.
+- **Errores:** se dicen en texto, cerca del campo, y se conectan con `aria-describedby`.
+- **Una pantalla, un `h1`.** Las tarjetas usan `h3` dentro de secciones con `h2`.
+- **Idioma:** `<html lang="es">`.
+
+## Patrones de teclado
+
+| Componente | Teclado |
+| --- | --- |
+| Botón, chip, segmento | Tab para llegar, Enter o Espacio para activar |
+| Puntaje personal | Tab entra al grupo, flechas cambian el valor |
+| Tarjeta | Una sola parada de Tab (el título), Enter abre el detalle |
+| Navegación inferior | Tab entre pestañas, Enter para ir |
+| Buscador | Escape borra el texto |
+
+## Lectores de pantalla
+
+- Chips y segmentos usan `aria-pressed`, así se anuncian como "seleccionado".
+- La pestaña actual usa `aria-current="page"`.
+- La barra de progreso anuncia "5 de 10 episodios", no un porcentaje.
+- El puntaje con emojis se anuncia como "3 de 5", no como "pochoclo pochoclo pochoclo".

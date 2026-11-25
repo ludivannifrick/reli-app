@@ -1,0 +1,38 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Fundamentos/Principios" />
+
+# Principios
+
+Dieciséis reglas de interfaz, y cómo las aplica Reli. Cada una tiene un lugar concreto en los tokens o en los componentes.
+
+## Estructura
+
+| # | Regla | En Reli |
+| --- | --- | --- |
+| 1 | Usá el espacio para agrupar lo que va junto | Escala de 4 px. Dentro de un grupo, `--space-2` o `--space-3`; entre grupos, `--space-5` o más. Nada de líneas para separar si alcanza con el espacio. |
+| 2 | Lo que se parece se ve y se comporta igual | Todos los controles miden 48 px de alto, usan `--radius-md` y el mismo borde. Un solo estilo de foco para toda la app. |
+| 3 | Lo que hace cosas distintas se ve distinto | Botón primario relleno, secundario con borde, terciario como texto. Un filtro (chip) es redondo; una acción (botón) no. |
+| 4 | Jerarquía clara: la acción principal resalta | Un solo botón primario por pantalla. Si entrecerrás los ojos, lo rojo es lo que se hace. |
+| 5 | Sacá lo que sobra | Sin degradados, una sombra suave para tarjetas y nada más. Los bordes decorativos (`--color-border`) son muy suaves y opcionales. |
+
+## Color y contraste
+
+| # | Regla | En Reli |
+| --- | --- | --- |
+| 6 | Empezá en blanco y negro; color con propósito | La base es crema y tinta. El rojo balde se reserva para lo que se toca: acción principal y progreso. La manteca resalta lo que estás viendo. |
+| 7 | Controles con contraste de 3:1 o más | Bordes de inputs y chips usan `--color-border-control`, verificado en ambos temas. |
+| 8 | Texto chico con contraste de 4.5:1 o más | Todo texto, incluido el secundario, pasa 4.5:1. Ver la tabla en [Color](?path=/docs/fundamentos-color--docs). |
+| 9 | No depender solo del color | Estados con ícono y palabra ("Vista" con tilde). Chips seleccionados con tilde y negrita. Errores con ícono y mensaje. Pestaña actual con negrita y fondo. |
+
+## Tipografía
+
+| # | Regla | En Reli |
+| --- | --- | --- |
+| 10 | Una sola sans serif | **Rubik** para todo, incluida la voz de Reli. La personalidad del osito sale de lo que dice y del globito, no de otra letra. |
+| 11 | Minúsculas altas | En Rubik la minúscula ocupa el 52% del tamaño de la letra (Jost, por ejemplo, el 46%), así que se lee bien a 13 px. |
+| 12 | Pocas mayúsculas; escribir como oración | Títulos y botones en tipo oración: "Mi videoteca", "Quiero verla". Nada de etiquetas en mayúsculas. |
+| 13 | Solo dos pesos | `--font-weight-regular` (400) y `--font-weight-bold` (700). No hay semibold. |
+| 14 | Nada de negro puro | El texto es tinta `#3A2A22` sobre crema. En oscuro, humo `#F5EDE0` sobre noche `#1E1714`. No hay `#000` ni `#FFF` de fondo. |
+| 15 | Alineado a la izquierda | `text-align: left` en la base. Ni el estado vacío se centra. |
+| 16 | Interlineado de 1.5 a 2 en texto largo | `--font-line-height-base` 1.5 para la UI y `--font-line-height-long` 1.65 para sinopsis y comentarios. Los títulos cortos usan 1.25. |

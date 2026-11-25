@@ -1,0 +1,33 @@
+.r-field { display: flex; flex-direction: column; gap: var(--space-2); }
+.r-field__label { font-size: var(--font-size-small); font-weight: var(--font-weight-bold); line-height: var(--font-line-height-tight); }
+.r-field__hint { font-size: var(--font-size-caption); color: var(--color-text-muted); }
+
+.r-input {
+  width: 100%; min-height: var(--size-control); padding: var(--space-3) var(--space-4);
+  border: var(--border-width) solid var(--color-border-control); border-radius: var(--radius-md);
+  background: var(--color-surface); color: var(--color-text);
+  font-size: var(--font-size-body); line-height: var(--font-line-height-base);
+}
+.r-input::placeholder { color: var(--color-text-muted); }
+.r-input:focus-visible { outline-offset: 0; }
+textarea.r-input { min-height: 120px; resize: vertical; line-height: var(--font-line-height-long); }
+.r-input:disabled { background: var(--color-surface-sunken); border-style: dashed; cursor: not-allowed; }
+
+/* Error: thicker border, icon and message. The message is linked with aria-describedby. */
+.r-input[aria-invalid="true"] { border-color: var(--color-danger); border-width: 2px; }
+.r-field__error { display: flex; gap: var(--space-1); align-items: flex-start; font-size: var(--font-size-small); color: var(--color-danger); }
+.r-field__error .r-icon { width: 18px; height: 18px; margin-top: 1px; }
+
+.r-search {
+  display: flex; align-items: center; gap: var(--space-2);
+  min-height: var(--size-control); padding: 0 var(--space-1) 0 var(--space-4);
+  border: var(--border-width) solid var(--color-border-control); border-radius: var(--radius-pill);
+  background: var(--color-surface); color: var(--color-text-muted);
+}
+.r-search:focus-within { outline: var(--border-focus) solid var(--color-focus); outline-offset: 2px; }
+.r-search input {
+  flex: 1; min-width: 0; border: none; background: transparent; outline: none;
+  color: var(--color-text); font-size: var(--font-size-body);
+}
+.r-search input::placeholder { color: var(--color-text-muted); }
+.r-search input::-webkit-search-cancel-button { display: none; }
