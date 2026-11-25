@@ -1,7 +1,6 @@
 /* Generated from tokens/tokens.json. Do not edit by hand: run `npm run tokens`. */
 :root, [data-theme="light"] {
-  --font-family-base: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-family-voice: 'Caveat', 'Figtree', cursive;
+  --font-family-base: 'Rubik', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --font-size-caption: 13px;

@@ -15,9 +15,9 @@ export default {
       description: {
         component: `Cuando una lista no tiene nada. Es el único lugar donde aparece Reli con su voz.
 
-**Contenido:** el osito (decorativo, \`alt=""\`), un globito opcional en Caveat, un título que dice qué pasa, un texto que dice qué hacer y, si aplica, un botón.
+**Contenido:** el osito (decorativo, \`alt=""\`), un globito opcional con lo que diría Reli, un título que dice qué pasa, un texto que dice qué hacer y, si aplica, un botón.
 
-**Regla:** el globito es personalidad, no información. Lo importante siempre está en el título y el texto, en Figtree. Todo alineado a la izquierda.`,
+**Regla:** el globito es personalidad, no información. Lo importante siempre está en el título y el texto. Todo alineado a la izquierda.`,
       },
     },
   },

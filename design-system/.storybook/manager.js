@@ -15,6 +15,6 @@ addons.setConfig({
     textColor: '#3A2A22',
     textMutedColor: '#6B5649',
     barBg: '#FFFDF7',
-    fontBase: "'Figtree', system-ui, sans-serif",
+    fontBase: "'Rubik', system-ui, sans-serif",
   }),
 });

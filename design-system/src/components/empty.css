@@ -6,9 +6,15 @@
 .r-empty__title { margin: 0; font-size: var(--font-size-title); font-weight: var(--font-weight-bold); line-height: var(--font-line-height-tight); }
 .r-empty__text { margin: 0; max-width: 40ch; color: var(--color-text-muted); line-height: var(--font-line-height-long); }
 
-/* Reli's voice: the one place the handwritten font is allowed. Always paired with a plain-text equivalent nearby. */
+/* Reli's voice: same font as the UI. The bubble shape, the butter fill and the words carry the personality. */
 .r-voice {
-  position: relative; margin: 0; padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius-lg); background: var(--color-accent); color: var(--color-text-on-accent);
-  font-family: var(--font-family-voice); font-size: 22px; line-height: var(--font-line-height-tight);
+  position: relative; margin: var(--space-2) 0 0; padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm) var(--radius-lg) var(--radius-lg) var(--radius-lg);
+  background: var(--color-accent); color: var(--color-text-on-accent);
+  font-size: var(--font-size-title-sm); font-weight: var(--font-weight-bold); line-height: var(--font-line-height-tight);
+}
+/* Tail pointing up, towards Reli above the bubble. */
+.r-voice::after {
+  content: ''; position: absolute; left: 0; top: -10px;
+  border-left: 14px solid var(--color-accent); border-top: 10px solid transparent;
 }
