@@ -1,0 +1,5 @@
+{
+  "installCommand": "npm ci --prefix design-system",
+  "buildCommand": "sh scripts/build-site.sh",
+  "outputDirectory": "site"
+}

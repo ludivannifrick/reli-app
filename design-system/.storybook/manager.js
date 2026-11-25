@@ -4,8 +4,8 @@ import { create } from 'storybook/theming';
 addons.setConfig({
   theme: create({
     base: 'light',
-    brandTitle: 'Reli · design system',
-    brandImage: 'reli-icono.svg',
+    brandTitle:
+      '<span style="display:flex;align-items:center;gap:10px;font-weight:700"><img src="reli-icono.svg" alt="" width="36" height="36" style="border-radius:10px">Reli design system</span>',
     brandTarget: '_self',
     colorPrimary: '#D7322F',
     colorSecondary: '#8E1F2B',

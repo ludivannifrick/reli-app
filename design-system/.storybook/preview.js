@@ -47,6 +47,7 @@ export default {
     controls: { expanded: true },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: ['Introducción', 'Fundamentos', ['Principios', 'Color', 'Tipografía', 'Espaciado y forma', 'Movimiento'], 'Accesibilidad', 'Componentes', 'Patrones'],
       },
     },

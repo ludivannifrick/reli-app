@@ -16,4 +16,4 @@ npm run build-storybook  # tokens + contrast check + static build in storybook-s
 
 ## Deploy
 
-A separate Vercel project (Hobby) with root directory `design-system`, build command `npm run build-storybook` and output directory `storybook-static`.
+Deployed with the app on the same Vercel project. `vercel.json` at the repo root runs `scripts/build-site.sh`, which serves the app at `/` and this Storybook at `/design-system/`.

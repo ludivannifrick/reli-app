@@ -18,4 +18,4 @@ npx serve .
 
 ## Deploy
 
-Vercel, plan Hobby (gratis). Se importa el repo con el preset "Other" y sin build command: cada push a `main` se publica solo.
+Vercel, plan Hobby (gratis). `vercel.json` corre `scripts/build-site.sh`, que publica la app en `/` y el design system (Storybook) en `/design-system/`. Cada push a `main` se publica solo.
